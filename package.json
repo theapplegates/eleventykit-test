@@ -1,0 +1,40 @@
+{
+    "name": "eleventykit",
+    "version": "1.0.2",
+    "description": "",
+    "prettier": {
+        "semi": false,
+        "trailingComma": "es5",
+        "singleQuote": true,
+        "printWidth": 70,
+        "tabWidth": 4,
+        "useTabs": false,
+        "bracketSpacing": true
+    },
+    "scripts": {
+        "dev": "rimraf dist && eleventy --serve & npx tailwindcss -i src/css/tailwind.css -o dist/style.css -w",
+        "build": "rimraf dist && ELEVENTY_PRODUCTION=true eleventy && NODE_ENV=production npx tailwindcss -i src/css/tailwind.css -o dist/style.css --minify"
+    },
+    "keywords": [
+        "eleventy",
+        "alpinejs",
+        "tailwindcss",
+        "static"
+    ],
+    "author": "Garrett Bland",
+    "license": "MIT",
+    "devDependencies": {
+        "@11ty/eleventy": "^0.12.1",
+        "@garrettbland/img-alt-tag-check": "^0.0.4",
+        "@garrettbland/lazy-load-images": "^0.0.6",
+        "@tailwindcss/forms": "^0.3.3",
+        "@tailwindcss/typography": "^0.4.1",
+        "alpinejs": "^3.0.6",
+        "eleventy-plugin-error-overlay": "^0.1.2",
+        "html-minifier": "^4.0.0",
+        "jsdom": "^16.6.0",
+        "prettier": "^2.3.1",
+        "rimraf": "^3.0.2",
+        "tailwindcss": "^2.2.0"
+    }
+}
